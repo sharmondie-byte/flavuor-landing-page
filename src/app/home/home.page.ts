@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    IonicModule,       // <---- needed for all ion-* components
-    CommonModule,
-    ReactiveFormsModule
-  ],
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  imports: [IonicModule, CommonModule, ReactiveFormsModule],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
 export class HomePage {
   contactForm: FormGroup;
@@ -27,9 +23,10 @@ export class HomePage {
 
   submitForm() {
     if (this.contactForm.valid) {
-      console.log('Form Data:', this.contactForm.value);
-      alert('Thank you! Your message has been sent.');
+      console.log('Form Submitted:', this.contactForm.value);
       this.contactForm.reset();
+    } else {
+      console.log('Form is invalid');
     }
   }
 }

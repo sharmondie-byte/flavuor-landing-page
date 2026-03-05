@@ -5,9 +5,9 @@ import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
+  standalone: true,       // <- important
   imports: [
-    IonicModule,       // <---- needed for all ion-* components
+    IonicModule,           // <- this allows <ion-item>, <ion-button>, etc.
     CommonModule,
     ReactiveFormsModule
   ],
@@ -27,8 +27,7 @@ export class HomePage {
 
   submitForm() {
     if (this.contactForm.valid) {
-      console.log('Form Data:', this.contactForm.value);
-      alert('Thank you! Your message has been sent.');
+      console.log(this.contactForm.value);
       this.contactForm.reset();
     }
   }

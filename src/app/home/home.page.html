@@ -1,88 +1,101 @@
 <<ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color="primary">
     <ion-title>Flavuor</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" style="background: linear-gradient(135deg, #e6f4ea, #d0f0c0);">
+<ion-content class="ion-padding">
 
   <!-- Hero Section -->
-  <section class="hero" style="text-align:center; padding: 80px 20px;">
-    <h1 style="font-size: 3rem; font-weight: 700; color: #1b3a2d;">Flavuor</h1>
-    <p style="font-size: 1.3rem; max-width: 650px; margin: 20px auto; color: #2e4d3d;">
-      Innovative bio-food and AI-driven systems that improve efficiency, automation, and real-world solutions.
+  <section class="hero-section" style="background-color:#e0f7fa; padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+    <h1>Welcome to Flavuor</h1>
+    <p>
+      At Flavuor, we specialize in bringing fresh, high-quality flavors directly to your kitchen.
+      Our passion is to enhance every meal with creativity, consistency, and excellence.
     </p>
-    <ion-button expand="small" color="success" style="margin-top: 25px;" routerLink="#contact">
-      Get in Touch
-    </ion-button>
   </section>
+
+  <!-- About / Organizational Overview Section -->
+<section class="about-section" style="padding:2rem; background-color:#f0f4c3; border-radius:10px; margin-bottom:2rem;">
+  <h2>About Flavuor</h2>
+  <p>
+    Flavuor is dedicated to transforming everyday meals into culinary experiences. 
+    Our mission is to provide high-quality, innovative flavors that bring joy to your kitchen. 
+    We value creativity, reliability, and sustainability in everything we do.
+  </p>
+  <ul>
+    <li><strong>Mission:</strong> Deliver exceptional flavors that inspire home cooking.</li>
+    <li><strong>Vision:</strong> Become South Africa's most loved flavor brand.</li>
+    <li><strong>Values:</strong> Quality, Innovation, Customer Delight, and Sustainability.</li>
+  </ul>
+</section>
 
   <!-- Features Section -->
-  <section style="padding: 60px 20px; text-align: center;">
-    <h2 style="font-size: 2.2rem; margin-bottom: 40px; color: #1b3a2d;">Our Focus Areas</h2>
-    <ion-grid>
-      <ion-row>
-        <ion-col size="12" size-md="4">
-          <ion-card class="feature-card">
-            <ion-card-header>
-              <ion-icon name="code-outline" class="feature-icon"></ion-icon>
-              <ion-card-title>Software & Systems</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Build custom software, dashboards, and automation tools to improve internal and client systems.
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col size="12" size-md="4">
-          <ion-card class="feature-card">
-            <ion-card-header>
-              <ion-icon name="analytics-outline" class="feature-icon"></ion-icon>
-              <ion-card-title>AI & Data</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Design AI pipelines, data models, and analytics tools for smarter, automated decisions.
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col size="12" size-md="4">
-          <ion-card class="feature-card">
-            <ion-card-header>
-              <ion-icon name="hardware-chip-outline" class="feature-icon"></ion-icon>
-              <ion-card-title>Hardware & IoT</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Integrate sensors and IoT systems to collect and transmit actionable real-time data.
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </section>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Quality Ingredients</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            We source only the freshest and most natural ingredients for all our products.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
 
-  <!-- Contact Section -->
-  <section id="contact" style="padding: 60px 20px; text-align: center;">
-    <h2 style="font-size: 2rem; margin-bottom: 30px; color: #1b3a2d;">Contact Us</h2>
-    <ion-card class="contact-card">
-      <ion-card-content>
-        <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
-          <ion-item>
-            <ion-label position="floating">Name</ion-label>
-            <ion-input formControlName="name"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label position="floating">Email</ion-label>
-            <ion-input type="email" formControlName="email"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label position="floating">Message</ion-label>
-            <ion-textarea formControlName="message"></ion-textarea>
-          </ion-item>
-          <ion-button expand="full" type="submit" [disabled]="!contactForm.valid" color="success" style="margin-top: 15px;">
-            Send Message
-          </ion-button>
-        </form>
-      </ion-card-content>
-    </ion-card>
-  </section>
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Innovative Recipes</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Our team constantly creates unique flavor combinations that excite your taste buds.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Reliable Delivery</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Fast and dependable delivery ensures our flavors reach you exactly when you need them.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Contact Form -->
+  <ion-card style="margin-top:2rem;">
+    <ion-card-header>
+      <ion-card-title>Contact Us</ion-card-title>
+      <ion-card-subtitle>Send us a message and we'll get back to you promptly.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+        <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input formControlName="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Message</ion-label>
+          <ion-textarea formControlName="message"></ion-textarea>
+        </ion-item>
+
+        <ion-button expand="full" type="submit" [disabled]="!contactForm.valid" style="margin-top:1rem;">
+          Submit
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
