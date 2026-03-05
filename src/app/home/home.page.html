@@ -1,20 +1,88 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Flavuor</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" style="background: linear-gradient(135deg, #e6f4ea, #d0f0c0);">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- Hero Section -->
+  <section class="hero" style="text-align:center; padding: 80px 20px;">
+    <h1 style="font-size: 3rem; font-weight: 700; color: #1b3a2d;">Flavuor</h1>
+    <p style="font-size: 1.3rem; max-width: 650px; margin: 20px auto; color: #2e4d3d;">
+      Innovative bio-food and AI-driven systems that improve efficiency, automation, and real-world solutions.
+    </p>
+    <ion-button expand="small" color="success" style="margin-top: 25px;" routerLink="#contact">
+      Get in Touch
+    </ion-button>
+  </section>
+
+  <!-- Features Section -->
+  <section style="padding: 60px 20px; text-align: center;">
+    <h2 style="font-size: 2.2rem; margin-bottom: 40px; color: #1b3a2d;">Our Focus Areas</h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="4">
+          <ion-card class="feature-card">
+            <ion-card-header>
+              <ion-icon name="code-outline" class="feature-icon"></ion-icon>
+              <ion-card-title>Software & Systems</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Build custom software, dashboards, and automation tools to improve internal and client systems.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="4">
+          <ion-card class="feature-card">
+            <ion-card-header>
+              <ion-icon name="analytics-outline" class="feature-icon"></ion-icon>
+              <ion-card-title>AI & Data</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Design AI pipelines, data models, and analytics tools for smarter, automated decisions.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="4">
+          <ion-card class="feature-card">
+            <ion-card-header>
+              <ion-icon name="hardware-chip-outline" class="feature-icon"></ion-icon>
+              <ion-card-title>Hardware & IoT</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Integrate sensors and IoT systems to collect and transmit actionable real-time data.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="padding: 60px 20px; text-align: center;">
+    <h2 style="font-size: 2rem; margin-bottom: 30px; color: #1b3a2d;">Contact Us</h2>
+    <ion-card class="contact-card">
+      <ion-card-content>
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+          <ion-item>
+            <ion-label position="floating">Name</ion-label>
+            <ion-input formControlName="name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Message</ion-label>
+            <ion-textarea formControlName="message"></ion-textarea>
+          </ion-item>
+          <ion-button expand="full" type="submit" [disabled]="!contactForm.valid" color="success" style="margin-top: 15px;">
+            Send Message
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </section>
+
 </ion-content>
