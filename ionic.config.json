@@ -1,0 +1,7 @@
+{
+  "name": "flavuor-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
